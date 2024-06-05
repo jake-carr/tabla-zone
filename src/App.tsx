@@ -5,7 +5,7 @@ import TaalSelector from "./components/TaalSelector";
 import BolVisualizer from "./components/BolVisualizer";
 import BPMSlider from "./components/BpmSlider";
 import PlayPauseControls from "./components/PlayPauseControls";
-import { Teental } from "./constants/taals";
+import { Taal, Teental } from "./constants/taals";
 import Modal from "./components/modals/Modal";
 import AboutContent from "./components/modals/AboutContent";
 import { Helmet } from 'react-helmet';
@@ -19,7 +19,7 @@ const AppDefaults = {
 };
 
 const App = () => {
-  const [selectedTaal, setSelectedTaal] = useLocalStorage('taal', AppDefaults.taal);
+  const [selectedTaal, setSelectedTaal] = useState<Taal>(AppDefaults.taal);
   const [bpm, setBpm] = useLocalStorage('bpm', AppDefaults.bpm);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [currentBeat, setCurrentBeat] = useState<number>(0);
