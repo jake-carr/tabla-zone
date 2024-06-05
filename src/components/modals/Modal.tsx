@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import useOnClickOutside from "../hooks/useOnClickOutside";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 import "./Modal.css";
 
 interface ModalProps {

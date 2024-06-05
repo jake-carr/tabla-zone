@@ -100,11 +100,18 @@
   font-style: italic;
 }
 
-.modal-buttons {
+.row-centered {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
+.col-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

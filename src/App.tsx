@@ -6,7 +6,7 @@ import BolVisualizer from "./components/BolVisualizer";
 import BPMSlider from "./components/BpmSlider";
 import PlayPauseControls from "./components/PlayPauseControls";
 import { Taal, Teental } from "./constants/taals";
-import Modal from "./components/Modal";
+import Modal from "./components/modals/Modal";
 import AboutContent from "./components/modals/AboutContent";
 import { Helmet } from 'react-helmet';
 import { metaTags } from "./constants/seo";
@@ -32,7 +32,7 @@ const App = () => {
       playerRefs.current[index].load(bol.audioPath);
     });
 
-    // Reset metronome whenever selectedTaal or bpm changes
+    // Reset metronome whenever selectedTaal changes
     if (isPlaying) {
       resetMetronome({ resetCurrentBeat: true })
       startMetronome();
@@ -43,7 +43,7 @@ const App = () => {
   useEffect(() => {
     Tone.getTransport().bpm.value = bpm;
 
-    // Reset metronome whenever bpm changes
+    // Reset metronome but stay at current beat when bpm changes
     if (isPlaying) {
       resetMetronome({ resetCurrentBeat: false })
       startMetronome();
@@ -82,14 +82,12 @@ const App = () => {
       setCurrentBeat((prev) => (prev + 1) % selectedTaal.sequence.length);
     }, "4n");
 
-    // await sleep(1000 * ((60 / bpm) * 1));
     Tone.getTransport().start();
   };
 
   useEffect(() => {
     if (isPlaying) {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const currentBol = selectedTaal.sequence[currentBeat];
+      // const currentBol = selectedTaal.sequence[currentBeat];
       playerRefs.current[currentBeat].start(Tone.getTransport().seconds + 0.1);
     }
   }, [currentBeat, isPlaying, selectedTaal.sequence]);
