@@ -1,0 +1,65 @@
+.bol-visualizer {
+  display: grid;
+  gap: var(--standard-horizontal-margin);
+  margin: var(--standard-vertical-margin);
+  grid-template-columns: repeat(auto-fill, minmax(var(--circle-size), 1fr));
+  justify-content: center;
+}
+
+.bol-visualizer.teental {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.bol-visualizer.rupak {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.bol-visualizer.jhaptaal {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.bol {
+  background-color: transparent;
+  color: var(--black);
+  border-radius: 50%;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: var(--font-size-base);
+  position: relative;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: var(--primary-color);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: var(--primary-color);
+    opacity: 0;
+  }
+}
+
+.bol.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  animation: pulse var(--pulse-duration) ease-out;
+  z-index: 0; /* behind the text */
+}
+
+.bol-name {
+  font-size: var(--font-size-base);
+  text-align: center;
+  color: var(--black);
+  z-index: 1;
+}

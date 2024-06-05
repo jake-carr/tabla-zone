@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Tabla Zone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tabla Zone is a free, lightweight practice app for Indian musicians. It is designed to assist with practicing various Indian rhythmic cycles (taals) using a simple and intuitive interface. The app is built using Tone.js, React, and Typescript.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Select Taals:** Choose from a variety of taals including Teental, Rupak, and Jhaptal, more will be added over time.
+- **Adjust Tempo:** Use the slider to set the beats per minute (BPM) to your desired speed.
+- **Play/Pause Controls:** Start and stop the taal with a simple click.
+- **Visual Representation:** Follow along with the visual guide of the beats to stay on rhythm. The sum is represented with an X while the kali is represented with an O.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To use Tabla Zone:
 
-### `npm test`
+1. Select the taal you want to practice from the options at the top.
+2. Adjust the BPM to your desired speed using the slider.
+3. Click the play button to start the taal.
+4. Follow along with the visual guide and enjoy your practice!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development
 
-### `npm run build`
+Tabla zone is created from the Create-React-App TS template. Running it is simple:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Install dependences - `npm install`
+2. Run the development server with `npm run start`
+3. Create production build with `npm run build`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The project uses:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Tone.js](https://tonejs.github.io/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-### `npm run eject`
+## Acknowledgements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Thanks to [icongeek26](https://icons8.com/icon/ts9XJzuqOBgM/tabla) for the logo and [mmiron](https://freesound.org/people/mmiron/packs/8162/) for the tabla samples.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Pull requests and forks are welcome. If you have a feature request or see a bug, please open an issue.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License. See the [LICENSE](#LICENSE) file for details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+Happy practicing with Tabla Zone!

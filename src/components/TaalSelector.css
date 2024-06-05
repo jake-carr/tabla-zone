@@ -1,0 +1,51 @@
+.taal-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--standard-vertical-margin);
+  gap: var(--standard-horizontal-margin);
+}
+
+.taal-button {
+  background: none;
+  color: var(--black);
+  border: none;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  position: relative;
+}
+
+.taal-button::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.taal-button.selected::after {
+  width: 100%;
+}
+
+.taal-button:hover:not(.selected)::after {
+  width: 100%;
+  background-color: var(--secondary-color);
+  animation: underline-grow 0.3s forwards;
+}
+
+@keyframes underline-grow {
+  from {
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  to {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+  }
+}

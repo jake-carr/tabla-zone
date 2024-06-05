@@ -1,0 +1,21 @@
+
+.about-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.75 * var(--standard-vertical-margin));
+}
+
+.about-header {
+    margin: 0;
+    padding: 0;
+    font-size: calc(0.75 * var(--font-size-base));
+}
+
+.about-text {
+    font-size: var(--font-size-sm);
+}
+
+.about-text span {
+    font-style: italic;
+}

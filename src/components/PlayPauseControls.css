@@ -1,0 +1,60 @@
+.start-stop-container {
+  margin-top: var(--standard-vertical-margin);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: var(--standard-horizontal-margin);
+  text-align: center;
+}
+
+.start-stop-button {
+  background-color: var(--quaternary-color);
+  color: var(--black);
+  border: none;
+  transition: background-color 0.3s;
+  font-size: var(--font-size-base);
+  margin: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--circle-size) * 1.5);
+  width: calc(var(--circle-size) * 1.5);
+  grid-column: 2;
+}
+
+.start-stop-button.start:hover,
+.start-stop-button.stop:hover {
+  background-color: var(--secondary-color);
+}
+
+.start-stop-button svg {
+  width: calc(var(--circle-size) * 0.75);
+  height: calc(var(--circle-size) * 0.75);
+}
+
+.current-beat {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 37.5px;
+  grid-column: 3;
+}
+
+.current-sum-kali {
+  font-size: var(--font-size-large);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 37.5px;
+  width: calc(var(--circle-size) * 0.75); /* Make it consistent with button size */
+  grid-column: 1;
+  padding-right: 10px;
+}
