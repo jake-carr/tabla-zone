@@ -5,11 +5,13 @@ import TaalSelector from "./components/TaalSelector";
 import BolVisualizer from "./components/BolVisualizer";
 import BPMSlider from "./components/BpmSlider";
 import PlayPauseControls from "./components/PlayPauseControls";
-import { Taal, Teental } from "./constants/taals";
+import { Teental } from "./constants/taals";
 import Modal from "./components/modals/Modal";
 import AboutContent from "./components/modals/AboutContent";
 import { Helmet } from 'react-helmet';
 import { metaTags } from "./constants/seo";
+import useLocalStorage from "./hooks/useLocalStorage";
+import { Bol } from "./constants/bols";
 
 const AppDefaults = {
   taal: Teental,
@@ -17,8 +19,8 @@ const AppDefaults = {
 };
 
 const App = () => {
-  const [selectedTaal, setSelectedTaal] = useState<Taal>(AppDefaults.taal);
-  const [bpm, setBpm] = useState<number>(AppDefaults.bpm);
+  const [selectedTaal, setSelectedTaal] = useLocalStorage('taal', AppDefaults.taal);
+  const [bpm, setBpm] = useLocalStorage('bpm', AppDefaults.bpm);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [currentBeat, setCurrentBeat] = useState<number>(0);
   const [modalContent, setModalContent] = useState<JSX.Element | null>(null);
@@ -28,7 +30,7 @@ const App = () => {
 
   useEffect(() => {
     // Load samples into players
-    selectedTaal.sequence.forEach((bol, index) => {
+    selectedTaal.sequence.forEach((bol: Bol, index: number) => {
       playerRefs.current[index].load(bol.audioPath);
     });
 
