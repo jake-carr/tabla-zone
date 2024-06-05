@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 768px) {
   .section-three {
-    margin-top: calc(var(--section-height) * 1.8);
+    margin-top: calc(var(--section-height) * 1.5);
   }
 }
 
