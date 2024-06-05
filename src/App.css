@@ -60,6 +60,12 @@
   flex-grow: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .section-three {
+    margin-top: calc(var(--section-height) * 1.8);
+  }
+}
+
 .bpm-container {
   display: flex;
   flex-direction: column;
