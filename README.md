@@ -1,6 +1,6 @@
 # Tabla Zone
 
-Tabla Zone is a free, lightweight practice app for Indian musicians. It is designed to assist with practicing various Indian rhythmic cycles (taals) using a simple and intuitive interface. The app is built using Tone.js, React, and Typescript.
+[Tabla Zone](https://tabla.zone/) is a free, lightweight practice app for Indian musicians. It is designed to assist with practicing various Indian rhythmic cycles (taals) using a simple and intuitive interface. The app is built using Tone.js, React, and Typescript.
 
 
 ## Features
@@ -12,7 +12,7 @@ Tabla Zone is a free, lightweight practice app for Indian musicians. It is desig
 
 ## Usage
 
-To use Tabla Zone:
+To use [Tabla Zone](https://tabla.zone/):
 
 1. Select the taal you want to practice from the options at the top.
 2. Adjust the BPM to your desired speed using the slider.
@@ -24,8 +24,8 @@ To use Tabla Zone:
 Tabla zone is created from the Create-React-App TS template. Running it is simple:
 
 1. Install dependences - `npm install`
-2. Run the development server with `npm run start`
-3. Create production build with `npm run build`
+2. Run the development server - `npm run start`
+3. Create production builds - `npm run build`
 
 The project uses:
 
@@ -44,7 +44,7 @@ Pull requests and forks are welcome. If you have a feature request or see a bug,
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](#LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/jake-carr/tabla-zone/blob/master/LICENSE) file for details.
 
 ---
 
